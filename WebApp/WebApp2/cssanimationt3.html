@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            h2
+            {
+                width: 350px;
+                animation-name: text;
+                animation-duration: 4s;
+                animation-iteration-count: 3;
+                background-color: aqua;
+
+            }
+            #one
+            {
+                animation-timing-function: ease;
+            }
+            #two
+            {
+                animation-timing-function: linear;
+            }
+            #three
+            {
+                animation-timing-function: ease-in;
+            }
+            #four
+            {
+                animation-timing-function: ease-out;
+            }
+            @keyframes text
+            {
+                from
+                {
+                    margin-left: 60%;
+                }
+                to
+                {
+                    margin-left: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="one">Welcome</h2>
+        <h2 id="two">Welcome</h2>
+        <h2 id="three">Welcome</h2>
+        <h2 id="four">Welcome</h2>
+
+    </body>
+</html>
