@@ -1,0 +1,22 @@
+<script>
+    var bns;
+    noofdays=parseInt(prompt("Enter the no of days::"))
+    if(noofdays>=30)
+    {
+        salary=parseInt(prompt("Enter the salary::"))
+        if(salary>=70000)
+        {
+            bns=salary+5000
+            document.write("Your salary is::"+bns)
+        }
+        else
+        {
+            bns=salary+4000
+            document.write("Your salary is::"+bns)
+        }
+    }
+    else
+    {
+        document.write("Not elig")
+    }
+</script>
