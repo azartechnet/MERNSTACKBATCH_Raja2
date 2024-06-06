@@ -1,6 +1,6 @@
 <script>
     var exp=parseInt(prompt("Enter the exp::"))
-    switch(exp)
+    /*switch(exp)
     {
         case 1:
             document.write("Case 1")
@@ -14,5 +14,36 @@
             break;
         default:
             document.write("Default case")
+    }*/
+    switch(exp)
+    {
+        case 1:
+        var score=parseInt(prompt("Enter the score is::"))
+    if(score>=90 && score<=100)
+    {
+        document.write("Grade-A")
     }
+    else if(score>=80 && score<90)
+    {
+        document.write("Grade-B")
+    }
+    else if(score>=70 && score<70)
+    {
+        document.write("Grade-C")
+    }
+    else{
+        document.write("Grade-D")
+    }
+    break;
+    case 2:
+        document.write("Case 2")
+        break;
+    case 3:
+        document.write("Case 3")
+        break;
+    default:
+        document.write("default case")
+        break;
+    }
+
 </script>
