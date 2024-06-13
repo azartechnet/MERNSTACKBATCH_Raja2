@@ -1,0 +1,28 @@
+<body>
+    <button onclick="demo()">ClickHere</button>
+    <button onclick="demo1()">Test</button>
+    <p id="d1"></p>
+    <script>
+         var s1=100;//global variable
+        function demo()
+        {
+            var t1;//local variable
+            
+            if(confirm("Press a button!"))
+            {
+                t1="welcome press ok button";
+            }
+            else
+            {
+                t1="Welcome press cancel button";
+            }
+            document.getElementById("d1").innerHTML=t1;
+        }
+      function demo1()
+      {
+           document.write("Its is demo1")
+           document.write(s1);
+      }
+
+    </script>
+</body>
