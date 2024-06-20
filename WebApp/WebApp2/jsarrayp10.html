@@ -1,0 +1,23 @@
+<p id="d1"></p>
+<script>
+    const n1=[10,1,2,3,30,40]
+    let txt="";
+    n1.forEach(myfun)
+    document.getElementById('d1').innerHTML=txt;
+   
+
+    function myfun(value)
+    {
+        txt+=value+"<br>"
+    }
+
+    //foreach example
+    let sum=0
+    n1.forEach(myfun2)
+    console.log(sum)
+    function myfun2(value)
+    {
+        sum+=value
+    }
+
+</script>

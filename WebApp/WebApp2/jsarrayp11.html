@@ -1,0 +1,46 @@
+<p id="d1"></p>
+<p id="d2"></p>
+<!-- <script>
+    //javascript map
+   const n1=[10,20,1,30,40,50]
+   const n2=n1.map(myfun)
+
+   document.getElementById('d1').innerHTML=n2;
+
+   function myfun(value)
+   {
+    return value*2
+   }
+
+   document.write("Orginal arrays is::"+n1)
+    
+</script> -->
+
+<!-- <script>
+    //flat map
+    const myarr=[1,2,3,4,5,6]
+    const newarr=myarr.flatMap((x)=>x*2)
+    document.getElementById("d1").innerHTML=newarr;
+</script> -->
+
+<!-- <script>
+    //javascript filter
+    const myarr=[10,20,67,40,1,60]
+    const newarr=myarr.filter((x)=>x>30)
+    document.getElementById("d1").innerHTML=newarr;
+</script> -->
+
+<script>
+    //javascript keys
+    let txt=""
+    const myobj=["mohamed","azar","sdlc"]
+    //const myobj={101:"azar",102:"mohamed",103:"raja"}
+    const newarr=myobj.entries()//keys//values
+    
+    for (let x of newarr)
+    {
+        txt+=x+"<br/>"
+    }
+    //document.getElementById("d1").innerHTML=newarr;
+    document.getElementById('d2').innerHTML=txt;
+</script>
