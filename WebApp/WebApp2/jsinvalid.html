@@ -1,0 +1,35 @@
+<style>
+    input
+    {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    /* input:invalid
+    {
+        border: 2px solid red;
+        background-color: #ffe6e6;
+    }
+    input:valid
+    {
+        border: 2px solid green;
+
+    } */
+    input:required
+    {
+        border: 2px solid red;
+        background-color: aqua;
+    }
+    input:optional
+    {
+        border: 2px solid blue;
+    }
+</style>
+<form>
+    <label>Email</label>
+    <input type="email" name="email" required>
+    <label>UserName</label>
+    <input type="text" name="username">
+    <input type="submit" value="Login">
+</form>

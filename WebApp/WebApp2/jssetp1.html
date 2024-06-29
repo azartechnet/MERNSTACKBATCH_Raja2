@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="d1"></p>
+        <script>
+            const emp=new Set(["a1","a2","a3","a1"])
+            // for(i of emp)
+            // {
+            //     document.write("Value is::"+i)
+            // }
+
+            //Covert the array
+
+            const empArray=Array.from(emp).join(",")
+
+            document.getElementById("d1").innerHTML=empArray+"Total Size::"+emp.size
+        </script>
+       
+    </body>
+</html>
