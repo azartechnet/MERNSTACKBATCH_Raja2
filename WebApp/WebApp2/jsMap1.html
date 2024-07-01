@@ -1,0 +1,38 @@
+<p id="d1"></p>
+<script>
+    const f1=new Map();
+
+    //set map value 
+
+    f1.set(101,"azar");
+    f1.set(102,"mohamed");
+    f1.set(103,"kamal");
+    let num=f1.get(101)
+    document.getElementById('d1').innerHTML="There are"+num+"";
+    f1.delete(101)
+    console.log("After deleting..",f1)
+    f1.clear()
+    console.log("Clear function::",f1)
+    f1.has(101)
+    console.log("Searching::",f1)
+    //entries
+     let text="";
+     for (let [key, value] of f1.entries()) {
+        text += key + " = " + value + "<br>";
+        }
+        document.getElementById('d1').innerHTML=text;
+    //keys
+    let text1="";
+    for (let key of f1.keys()) {
+        text1 += key + "<br>";
+        }
+        document.getElementById('d1').innerHTML=text1;
+
+    //values
+    let text2="";
+    for (let value of f1.values()) {
+        text2 += value + "<br>";
+        }
+    
+          
+</script>
