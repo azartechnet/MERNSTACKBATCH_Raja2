@@ -1,0 +1,30 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // $(document).ready(function(){
+    //     $("button").click(function(){
+    //         $("#div1").fadeToggle();
+    //         $("#div2").fadeToggle("slow");
+    //         $("#div3").fadeToggle(3000);
+    //     })
+    //     });
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#div1").fadeTo(3000);
+            $("#div2").fadeTo("slow", 0.15);
+            $("#div3").fadeTo(3000, 0.4);
+            })
+    })
+</script>
+<button>ClickHere</button>
+
+<div id="div1" style="width: 80px;height: 80px;background-color: red;">
+This is div1
+</div>
+<br>
+<div id="div2" style="width: 80px;height: 80px;background-color:yellow;">
+    This is div2
+</div>
+<br>
+<div id="div3" style="width: 80px;height: 80px;background-color:blue;">
+    This is div3
+</div>
