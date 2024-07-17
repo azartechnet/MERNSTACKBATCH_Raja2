@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="d1"></p>
+        <script>
+            const text='{"name":"azar","age":"function(){return 30;}","city":"nkl"}';
+            const obj=JSON.parse(text)
+            obj.age=eval("("+obj.age+")");
+            console.log(obj);
+            document.getElementById("d1").innerHTML=obj.name+","+obj.age();
+        </script>
+    </body>
+</html>

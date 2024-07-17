@@ -1,0 +1,12 @@
+<script>
+    //storing data
+    const myObj={name:"mohamed",age:31,city:"krr"};
+    const myJSON=JSON.stringify(myObj)
+    localStorage.setItem("testJSON",myJSON);
+
+    //Retrieving data
+    let text=localStorage.getItem("testJSON")
+    let obj=JSON.parse(text)
+    console.log(obj)
+    document.write(obj.name+""+obj.age+""+obj.city)
+</script>
