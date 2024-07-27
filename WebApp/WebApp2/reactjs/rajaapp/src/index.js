@@ -90,10 +90,62 @@ r2.render(myelm8);*/
 
 //Without JSX
 
-const myElement = React.createElement('p', {}, 'I do not use JSX!');
+/*const myElement = React.createElement('p', {}, 'I do not use JSX!');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
+root.render(myElement);*/
+
+//React List
+
+/*const App=()=>{
+  return(
+    <div>
+    <h1>My First React App</h1>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+  )
+ 
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<App/>)*/
+
+//Fragment tag
+/*const App=()=>{
+  return(
+    <div>
+    <h1>Welcome</h1>
+    <h2>Welcome</h2>
+    </div>
+
+  )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<App/>)*/
+
+//importing css and implementing bootstrap
+
+import './index.css';
+
+const App=()=>{
+  return(
+    <div className="container">
+      <h1>Welcome</h1>
+      <h2>Welcome</h2>
+      <form>
+        <input type="submit" value="Submit" className="btn btn-info"/>
+      </form>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<App/>)
+
 
 
 
