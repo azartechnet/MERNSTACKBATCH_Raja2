@@ -130,7 +130,7 @@ r1.render(<App/>)*/
 
 //importing css and implementing bootstrap
 
-import './index.css';
+/*import './index.css';
 
 const App=()=>{
   return(
@@ -144,7 +144,49 @@ const App=()=>{
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<App/>)
+r1.render(<App/>)*/
+
+//Conditional rendering
+
+/*const x=11
+let text="";
+if(x>10){
+  text="world"
+  }else if(x==10){
+    text="equal"
+  }else{
+    text="less"
+  }
+
+  const Myelem=()=>{
+    return(
+      <div>
+        <h1>{text}</h1>
+      </div>
+    )
+  }
+
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Myelem/>)*/
+
+  //class component
+
+  class Sample extends React.Component
+  {
+    render()
+    {
+      return(
+        <div>
+          <h1>Hello</h1>
+        </div>
+      )
+    }
+  }
+
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Sample/>)
+
+
 
 
 
