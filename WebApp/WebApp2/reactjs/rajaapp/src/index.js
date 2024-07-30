@@ -171,7 +171,7 @@ if(x>10){
 
   //class component
 
-  class Sample extends React.Component
+  /*class Sample extends React.Component
   {
     render()
     {
@@ -184,10 +184,73 @@ if(x>10){
   }
 
   const r1=ReactDOM.createRoot(document.getElementById('root'))
-  r1.render(<Sample/>)
+  r1.render(<Sample/>)*/
 
+  //Function Component with argument
 
+  /*function Sample(props)
+  {
+     return(
+      <div>
+        <h1>Hello {props.name}</h1>
+        <h1>Hello{props.age}</h1>
+      </div>
+      )
 
+  }
+
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Sample name="Rahul" age="20"/>)*/
+
+  /*function Greeting(props)
+  {
+    return(
+      <>
+         <h1>Hello,{props.user}</h1>
+
+         <h1>Hello,{props.age}</h1>
+      </>
+    )
+  }
+
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Greeting user="Rahul" age="20"/>)*/
+
+  //Component in Component
+
+  /*function Sample1()
+  {
+     return(
+      <div>
+        <center>
+          <a href="">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </center>
+      </div>
+     )
+  }
+
+  function Sample2()
+  {
+    return(
+      <div>
+        <Sample1/>
+        <br></br>
+        <center>
+        <h1>This is Sample2</h1>
+        </center>
+      </div>
+    )
+  }
+
+   const r1=ReactDOM.createRoot(document.getElementById('root'))
+   r1.render(<Sample2/>)*/
+
+import Sample from "./App";
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)  //importing the component and rendering it
 
 
 
