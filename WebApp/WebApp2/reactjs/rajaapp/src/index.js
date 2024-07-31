@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM  from "react-dom/client";
 
 /*function Sample()
@@ -247,11 +247,60 @@ if(x>10){
    const r1=ReactDOM.createRoot(document.getElementById('root'))
    r1.render(<Sample2/>)*/
 
-import Sample from "./App";
+/*import Sample from "./App";
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Sample/>)  //importing the component and rendering it
+r1.render(<Sample/>)  //importing the component and rendering */
 
+//Component Constructor
+
+/*class Sample extends React.Component
+{
+   constructor(){
+    super();
+    this.state={
+      name:"Rahul",
+      age:20
+      }
+    }
+      render()
+      {
+        return(
+          <div>
+            <h1>{this.state.name}</h1>
+            <h1>{this.state.age}</h1>
+          </div>
+        )
+      }
+   
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//Using Constructor
+
+class Header extends Component
+{
+  text="Welcome";
+  constructor()
+  {
+     super();
+     this.state={f1:'red'}
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>{this.text}</h1>
+        <h1>{this.state.f1}</h1>
+        <h1 style={{color:this.state.f1}}>Welcome</h1>
+      </div>
+    )
+}
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header/>)
 
 
 
