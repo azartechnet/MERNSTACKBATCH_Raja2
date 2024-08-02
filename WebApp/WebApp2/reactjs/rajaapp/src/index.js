@@ -279,7 +279,7 @@ r1.render(<Sample/>)*/
 
 //Using Constructor
 
-class Header extends Component
+/*class Header extends Component
 {
   text="Welcome";
   constructor()
@@ -300,8 +300,91 @@ class Header extends Component
 }
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header/>)
+r1.render(<Header/>)*/
 
+
+//Changing the state object
+
+/*class Sample extends React.Component
+{
+    constructor()
+    {
+        super();
+        this.state={
+            emp:{
+                name:"John",
+                age:25,
+                city:"karur"
+            },
+            showData:false
+        };
+    }
+    showData()
+    {
+        this.setState({showData:true});
+    }
+    hideData()
+    {
+        this.setState({showData:false});
+    }
+    render()
+    {
+        let data;
+        if(this.state.showData==true)
+        {
+            data=<div>{this.state.emp.name}{this.state.emp.age}{this.state.emp.city}
+               <button onClick={this.hideData.bind(this)}>HideData</button>
+            </div>
+            
+        }
+        else
+        {
+             data=<div><button onClick={this.showData.bind(this)}>ShowData</button></div>
+        }
+        return(
+            <div>
+                <h1>Welcome</h1>
+                <h2>EmployeeDetails</h2>
+                {data}
+            </div>
+        )
+    }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//React Events
+
+/*function Football()
+{
+  const shoot=()=>{
+    alert("Goal Shooted")
+  }
+  return(
+    <div>
+      <button onClick={shoot}>Shoot</button>
+    </div>
+  )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+function Football()
+{
+  const shoot=(a)=>{
+    alert(a)
+}
+return(
+  <div>
+    <button onClick={()=>shoot("Goal Shooted")}>Shoot</button>
+  </div>
+)
+}
+
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Football/>)
 
 
 
