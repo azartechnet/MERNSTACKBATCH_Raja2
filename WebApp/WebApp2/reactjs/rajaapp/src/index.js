@@ -437,7 +437,7 @@ r1.render(<Garage/>);*/
 
 //React Form
 
-function MyForm()
+/*function MyForm()
 {
    return(
     <form>
@@ -453,7 +453,35 @@ function MyForm()
    )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<MyForm/>);
+r1.render(<MyForm/>);*/
 
-//React Hooks
+//React getDerivedStateFromProps
+
+class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={favcolor:"azar"};
+  }
+  /*static getDerivedStateFromProps(props,state)
+  {
+    
+      return { favcolor: props.favcolor };
+    
+  }*/
+  
+
+  render()
+  {
+     return(
+      <div>
+         <h1>My Fav Color is {this.state.favcolor}</h1>
+      </div>
+     )
+  }
+
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header favcolor="blue"/>)
 
