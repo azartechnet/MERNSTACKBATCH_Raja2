@@ -457,7 +457,7 @@ r1.render(<MyForm/>);*/
 
 //React getDerivedStateFromProps
 
-class Header extends React.Component
+/*class Header extends React.Component
 {
   constructor(props)
   {
@@ -469,7 +469,7 @@ class Header extends React.Component
     
       return { favcolor: props.favcolor };
     
-  }*/
+  }
   
 
   render()
@@ -483,5 +483,78 @@ class Header extends React.Component
 
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header favcolor="blue"/>)
+r1.render(<Header favcolor="blue"/>)*/
 
+//ComponentDidMount
+
+// setTimeout executes the code only once after the specified delay, 
+//  setInterval executes the code repeatedly at the specified interval.
+//ComponentWillUnmount clears the timer when the component is about to be
+// removed from the DOM to prevent memory leaks
+
+/*class TimerComponent extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={
+      seconds:0,
+    };
+  }
+
+  componentDidMount()
+  {
+    this.timerID=setInterval(
+      () => this.setState(
+        {seconds: this.state.seconds + 1}),
+      1000
+      );
+}
+componentWillUnmount()
+{
+  clearInterval(this.timerID);
+}
+
+render()
+{
+  return(
+    <div>
+      <h1>Timer Component</h1>
+      <h2>Time Elapsed: {this.state.seconds} seconds</h2>
+
+    </div>
+  )
+}
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<TimerComponent/>)*/
+
+//Updating getDerviedStateFromProps
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { empname: "azar" };
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    return { empname: props.empname };
+  }
+
+  changeEmployee = () => {
+    this.setState({ empname: "mohamed" });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>This is Render Page {this.state.empname}</h1>
+        <button type='submit' onClick={this.changeEmployee}>Click</button>
+      </div>
+    );
+  }
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<Header empname="tech" />);
