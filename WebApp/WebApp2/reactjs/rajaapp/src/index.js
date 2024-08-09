@@ -532,29 +532,75 @@ r1.render(<TimerComponent/>)*/
 
 //Updating getDerviedStateFromProps
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { empname: "azar" };
+/*class Header extends React.Component{
+  constructor(props){
+      super(props);
+      this.state={empname:"Azar"};
   }
-
-  static getDerivedStateFromProps(props, state) {
-    return { empname: props.empname };
+  static getDrivedStateFromProps(props,state){
+      return{empname:props.empname};
   }
-
-  changeEmployee = () => {
-    this.setState({ empname: "mohamed" });
+  changeEmployee=()=>{
+      this.setState({empname:"Mohan"});
   }
-
-  render() {
-    return (
-      <div>
-        <h1>This is Render Page {this.state.empname}</h1>
-        <button type='submit' onClick={this.changeEmployee}>Click</button>
-      </div>
-    );
+  render(){
+      return(
+          <div>
+              <h1>This is Render page{this.state.empname}</h1>
+              <button type='submit' onClick={this.changeEmployee}>Click</button>
+          </div>
+      );
   }
 }
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<Header empname="tech"/>);*/
 
-const r1 = ReactDOM.createRoot(document.getElementById('root'));
-r1.render(<Header empname="tech" />);
+//ShouldComponentUpdate()
+
+/*class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={favcolor:"Red"}
+  }
+  shouldComponentUpdate()
+  {
+    return true;
+  }
+  changeColor=()=>{
+    this.setState({favcolor:"Blue"});
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>This is Render page{this.state.favcolor}</h1>
+        <button type='submit' onClick={this.changeColor}>Click</button>
+      </div>
+      );
+}
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<Header/>);*/
+
+//React Hooks useState()
+
+import { useState } from "react";
+
+function Counter()
+{
+    const [count,setCount]=useState(10)
+    const [name,setName]=useState("mohamed")
+    return(
+      <div>
+        <h1>Count:{count}</h1>
+        <button type='submit' onClick={()=>setCount(count+1)}>Click</button>
+        <h1>Name:{name}</h1>
+        <button type='submit' onClick={()=>setName("mohamed tech")}>Click</button>
+
+      </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<Counter/>);
