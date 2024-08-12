@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import ReactDOM  from "react-dom/client";
 
 /*function Sample()
@@ -588,7 +588,7 @@ r1.render(<Header/>);*/
 
 import { useState } from "react";
 
-function Counter()
+/*function Counter()
 {
     const [count,setCount]=useState(10)
     const [name,setName]=useState("mohamed")
@@ -603,4 +603,44 @@ function Counter()
     )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'));
-r1.render(<Counter/>);
+r1.render(<Counter/>);*/
+
+//React UseEffect
+
+/*function Timer()
+{
+  const [count,setCount]=useState(0)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setCount(count+1)
+    },1000)
+  })
+  return <h1>I have Renderd{count}</h1>
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Timer/>)*/
+
+//React UseEffect
+
+function ClickCounter()
+{
+  const [count,setCount]=useState(0)
+
+  useEffect(()=>{
+    document.title=`You Clicked ${count} times`
+    
+    },[count])
+  
+
+  return(
+  
+    <button type='submit' onClick={()=>setCount(count+1)}>Click</button>
+  )
+
+  }
+
+
+
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<ClickCounter/>);
