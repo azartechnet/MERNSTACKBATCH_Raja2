@@ -623,7 +623,7 @@ r1.render(<Timer/>)*/
 
 //React UseEffect
 
-function ClickCounter()
+/*function ClickCounter()
 {
   const [count,setCount]=useState(0)
 
@@ -643,4 +643,120 @@ function ClickCounter()
 
 
 const r1=ReactDOM.createRoot(document.getElementById('root'));
-r1.render(<ClickCounter/>);
+r1.render(<ClickCounter/>);*/
+
+//React Without UseContext
+
+/*function Component1()
+{
+  const [user,setUser]=useState("mohamed")
+  return(
+    <div>
+      <h1>Hello {user}</h1>
+      <Component2 user={user}/>
+    </div>
+  )
+}
+function Component2(props)
+{
+  return(
+    <div>
+      <h1>Hello {props.user}</h1>
+      
+    </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<Component1/>);*/
+
+//React useContext
+
+/*import { createContext,useContext } from "react";
+
+const UserContext=createContext()
+
+function Component1()
+{
+   const [user,setUser]=useState("mohamed");
+   return(
+    <UserContext.Provider value={user}>
+      <div>
+        <h1>Hello {user}</h1>
+        <Component2/>
+      </div>
+    </UserContext.Provider>
+    )
+}
+function Component2()
+{
+  const user=useContext(UserContext);
+  return(
+    <div>
+      <h1>Hello {user}</h1>
+      <Component3/>
+    </div>
+    )
+}
+function Component3()
+{
+  const user=useContext(UserContext);
+  return(
+    <div>
+      <h1>Hello {user}</h1>
+
+    </div>
+  )
+  }
+    const r1=ReactDOM.createRoot(document.getElementById('root'));
+    r1.render(<Component1/>);*/
+
+    //useRef
+
+    /*import { useRef } from "react";
+    function FocusInput()
+    {
+      const inputRef=useRef(null);
+      const handleClick=()=>{
+        inputRef.current.focus();
+        }
+        return(
+          <div>
+            <input type="text" ref={inputRef}/>
+            <button onClick={handleClick}>Focus</button>
+
+          </div>
+        )
+    }
+    const r1=ReactDOM.createRoot(document.getElementById('root'));
+    r1.render(<FocusInput/>);*/
+
+    //useRef another 
+
+    import { useRef } from "react";
+
+function FocusInput() {
+  const inputRef = useRef(null);
+
+  const handleClick = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        ref={inputRef}
+        style={{ backgroundColor: "lightblue" }} // Inline style for background color
+      />
+      <button
+        onClick={handleClick}
+        style={{ backgroundColor: "lightgreen" }} // Inline style for background color
+      >
+        Focus
+      </button>
+    </div>
+  );
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<FocusInput />);
