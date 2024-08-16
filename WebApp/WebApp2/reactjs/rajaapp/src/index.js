@@ -732,7 +732,7 @@ function Component3()
 
     //useRef another 
 
-    import { useRef } from "react";
+    /*import { useRef } from "react";
 
 function FocusInput() {
   const inputRef = useRef(null);
@@ -759,4 +759,4 @@ function FocusInput() {
 }
 
 const r1 = ReactDOM.createRoot(document.getElementById("root"));
-r1.render(<FocusInput />);
+r1.render(<FocusInput />);*/
