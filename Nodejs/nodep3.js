@@ -1,5 +1,5 @@
 var f1=require('fs')
-f1.open('sample.txt',function(err,data){
+f1.open('azar.txt',function(err,data){
     if(err)
         console.log("Error")
     else
